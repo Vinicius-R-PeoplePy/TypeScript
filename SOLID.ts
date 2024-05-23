@@ -184,7 +184,7 @@ class StudentPostGraduation extends Student {
 // A class should not be forced to implement methods that will not be used.
 // So imagine that you have a class that implement a interface 
 // that its never being used. 
-// Let's imagin a scenario with a Seller and a Receptionist of some shop. 
+// Let's imagine a scenario with a Seller and a Receptionist of some shop. 
 // Both seller and receptionist have a salary, but only a seller have a commission. 
 
 interface Employee { 
@@ -224,7 +224,7 @@ interface Commisionable {
     generateComission(): void;
 }
 
-class Seller implements Empoyee, Commissionable { 
+class Seller implements Employee, Commissionable { 
     salary(): number {
         return 1000;
     }
@@ -249,8 +249,8 @@ class Receptionist implements Employee {
 // Dependency Inversion Principle - DIP 
 
 // Imagine that you have a Service class that integrates with a 
-// Repository class that will call the Database, for example Postgress.
-// But if the repository clçass change and the database change
+// Repository class that will call the Database, for example Postgres.
+// But if the repository class change and the database change
 // for a MongoDB, for example. 
 
 interface Order { 
@@ -302,7 +302,7 @@ class OrderService {
 }
 
 // Now we receive the repository as parameter on the constructor
-// to instantiate and us. Now we depend of the abstraction and
+// to instantiate and use. Now we depend of the abstraction and
 // we don't need to know what repository we are using.
 
 // Definition: depend on abstractions rather than concrete implementations.
